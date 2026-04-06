@@ -1,7 +1,4 @@
-// --- 1. Global Variables & Config ---
-const API_URL = '/api/auth';
-// --- 2. Authentication Logic ---
-
+const API_URL = 'https://ismart-bus.onrender.com/api/auth';
 fetch("https://ismart-bus.onrender.com/api/bus")
   .then(res => {
     if (!res.ok) throw new Error("API error");
