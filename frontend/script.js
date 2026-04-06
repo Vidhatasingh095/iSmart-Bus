@@ -2,6 +2,12 @@
 const API_URL = '/api/auth';
 app.use(express.static("public"));
 // --- 2. Authentication Logic ---
+const cors = require("cors");
+app.use(cors());
+
+fetch("https://your-app.onrender.com/api/bus")
+  .then(res => res.json())
+  .then(data => console.log(data));
 
 document.addEventListener('DOMContentLoaded', () => {
     const loginContainer = document.getElementById('login-container');
