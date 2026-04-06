@@ -3,8 +3,12 @@ const API_URL = '/api/auth';
 // --- 2. Authentication Logic ---
 
 fetch("https://ismart-bus.onrender.com/api/bus")
-  .then(res => res.json())
-  .then(data => console.log(data));
+  .then(res => {
+    if (!res.ok) throw new Error("API error");
+    return res.json();
+  })
+  .then(data => console.log(data))
+  .catch(err => console.error(err));
 
 document.addEventListener('DOMContentLoaded', () => {
     const loginContainer = document.getElementById('login-container');

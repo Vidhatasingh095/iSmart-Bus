@@ -49,7 +49,12 @@ mongoose.connect(mongoURI)
 // --- API Routes ---
 const authRoutes = require('./models/auth');
 app.use('/api/auth', authRoutes);
-
+app.get("/api/bus", (req, res) => {
+  res.json({
+    bus: "Bus 101",
+    location: { lat: 28.6, lng: 77.2 }
+  });
+});
 // SSE (Server-Sent Events) setup for real-time updates
 const clients = new Set();
 
