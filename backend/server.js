@@ -38,7 +38,6 @@ app.use(morgan('combined', { stream: logStream }));
 // 3. Static File Serving
 // Serve the frontend files (HTML, CSS, JS)
 const frontendPath = path.join(__dirname, '../frontend');
-app.use(express.static(frontendPath));
 
 // --- Database Connection ---
 const mongoURI = 'mongodb://127.0.0.1:27017/bustrack';
@@ -84,9 +83,6 @@ app.get('/api/driver/stream', (req, res) => {
 // This should come after API routes. It ensures that any direct navigation
 // to a frontend route (e.g., /dashboard) is handled by serving the index.html,
 // allowing the frontend router to take over.
-app.get(/^(?!\/api).*/, (req, res) => {
-    res.sendFile(path.join(frontendPath, 'index.html'));
-});
 
 // --- Server Start ---
 const PORT = 5000;
