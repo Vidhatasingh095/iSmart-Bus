@@ -5,6 +5,7 @@ const path = require('path');
 const fs = require('fs');
 const morgan = require('morgan'); // Import morgan
 require('dotenv').config();
+app.use(cors());
 
 const app = express();
 

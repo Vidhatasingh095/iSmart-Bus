@@ -2,10 +2,8 @@
 const API_URL = '/api/auth';
 app.use(express.static("public"));
 // --- 2. Authentication Logic ---
-const cors = require("cors");
-app.use(cors());
 
-fetch("https://your-app.onrender.com/api/bus")
+fetch("https://ismart-bus.onrender.com/api/buses")
   .then(res => res.json())
   .then(data => console.log(data));
 
