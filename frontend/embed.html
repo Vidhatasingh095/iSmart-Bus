@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Embed Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#0b0b0b;--panel:#111;--text:#e5e7eb;--muted:#9ca3af;--accent:#ff6600}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--text);height:100vh;display:flex;flex-direction:column}
+    header{display:flex;gap:10px;align-items:center;justify-content:space-between;padding:12px 16px;background:var(--panel);border-bottom:1px solid #1f1f1f}
+    .brand{font-weight:800;letter-spacing:.5px;color:var(--accent)}
+    .controls{display:flex;gap:8px;flex:1;max-width:900px;margin-left:12px}
+    input[type="url"]{flex:1;padding:10px 12px;border-radius:10px;border:1px solid #2a2a2a;background:#0e0e0e;color:var(--text);font-weight:600}
+    button{background:var(--accent);color:#fff;border:none;border-radius:10px;padding:10px 14px;font-weight:800;cursor:pointer}
+    .hint{font-size:12px;color:var(--muted);padding:6px 16px}
+    .wrap{flex:1;min-height:0}
+    iframe{width:100%;height:100%;border:none;background:#000}
+    @media (max-width:520px){.controls{flex-direction:column;max-width:none}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">Embed</div>
+    <div class="controls">
+      <input id="embed-url" type="url" placeholder="http://192.168.1.10:5500" inputmode="url" spellcheck="false" autocomplete="off">
+      <button id="load-btn">Load</button>
+    </div>
+  </header>
+  <div class="hint">Dono devices same Wi‑Fi par hon. Agar site iframe block karti hai (X‑Frame‑Options/CSP), to host par allow karna hoga.</div>
+  <div class="wrap">
+    <iframe id="embed-frame" referrerpolicy="no-referrer-when-downgrade" allow="geolocation *; microphone; camera; clipboard-read; clipboard-write"></iframe>
+  </div>
+  <script>
+    (function(){
+      const qs = new URLSearchParams(location.search);
+      const def = 'http://192.168.1.10:5500';
+      const saved = localStorage.getItem('embedSrc') || '';
+      const src = (qs.get('src') || saved || def).trim();
+      const inp = document.getElementById('embed-url');
+      const frame = document.getElementById('embed-frame');
+      const btn = document.getElementById('load-btn');
+      const setSrc = (u)=>{ try{ if(!/^https?:\/\//i.test(u)) return; frame.src = u; localStorage.setItem('embedSrc',u); }catch(e){} };
+      inp.value = src;
+      setSrc(src);
+      btn.addEventListener('click',()=>setSrc(inp.value.trim()));
+      inp.addEventListener('keydown',(e)=>{ if(e.key==='Enter'){ e.preventDefault(); setSrc(inp.value.trim()); }});
+    })();
+  </script>
+</body>
+</html>

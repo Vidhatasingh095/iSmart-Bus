@@ -1,0 +1,398 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+
+/* Brand Section Styling */
+.brand-section {
+    text-align: center;
+    margin-bottom: 30px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.logo-container {
+    margin-bottom: 15px;
+}
+
+.main-logo {
+    width: 80px; /* Logo ka size yahan se control karein */
+    height: auto;
+    filter: drop-shadow(0px 4px 10px rgba(0,0,0,0.2));
+}
+
+/* Tagline Headings */
+.tagline-container h1 {
+    font-size: 24px;
+    font-weight: 800;
+    color: #ffffff; /* Agar background dark hai, varna #333 rakhein */
+    margin: 0;
+}
+
+.live-badge {
+    background: #ff5e00; /* Orange color from logo */
+    color: white;
+    padding: 2px 8px;
+    border-radius: 5px;
+    font-size: 14px;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+.sub-tagline {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 5px 0;
+    color: #ffffff;
+}
+
+.highlight-orange { color: #ff9100; } /* Orange shade */
+.highlight-red { color: #ff3d00; }    /* Red-Orange shade */
+
+.motto {
+    font-size: 14px;
+    color: #cbd5e1; /* Light grey for subtle look */
+    letter-spacing: 1px;
+    margin-top: 5px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.auth-container, .split-container {
+    width: 500px;
+}
+
+#login-container, #signup-container {
+    max-width: 400px;
+    margin: 0 auto;
+    height: auto;
+    padding: 40px 0px;
+}
+
+.auth-form-container {
+    background-color: #1a1a1a;
+    padding: 40px;
+    border-radius: 12px;
+    border: 1px solid #333;
+    text-align: center;
+}
+
+.auth-header {
+    margin-bottom: 30px;
+}
+
+.auth-logo {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 20px;
+}
+
+.auth-title {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.auth-title .highlight {
+    color: #ff9900;
+}
+
+.auth-subtitle {
+    color: #888;
+    margin-top: 8px;
+}
+
+.auth-form .form-row {
+    display: flex;
+    gap: 16px;
+}
+
+.input-wrapper {
+    text-align: left;
+    margin-bottom: 20px;
+    flex: 1;
+}
+
+.input-wrapper label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #aaa;
+}
+
+.input-wrapper input {
+    width: 100%;
+    padding: 12px;
+    background-color: #222;
+    border: 1px solid #444;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 16px;
+}
+
+.btn {
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.btn-secondary {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.separator {
+    color: #555;
+    margin: 20px 0;
+}
+
+.auth-footer-text {
+    margin-top: 20px;
+    color: #888;
+}
+
+.auth-footer-text a {
+    color: #ff9900;
+    text-decoration: none;
+}
+
+.terms-text {
+    margin-top: 40px;
+    color: #888;
+    font-size: 12px;
+    text-align: center;
+}
+
+.terms-text a {
+    color: #aaa;
+}
+
+.btn-primary-orange {
+    background-color: #ff6600;
+    color: #fff;
+}
+
+.password-wrapper {
+    position: relative;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.auth-links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.auth-links a {
+    color: #888;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.auth-links a:hover {
+    text-decoration: underline;
+}
+
+.help-content {
+    text-align: center;
+    color: #aaa;
+    margin-bottom: 20px;
+}
+
+.contact-info {
+    margin-top: 20px;
+}
+
+.contact-link {
+    display: block;
+    padding: 15px;
+    background-color: #2d2d2d;
+    border: 1px solid #444;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    text-align: left;
+}
+
+.contact-link:hover {
+    background-color: #333;
+}
+
+#help-container .auth-footer-text a {
+    color: #ff9900;
+}
+
+.split-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+.brand-section {
+    text-align: center;
+}
+
+.brand-logo {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
+}
+
+.brand-name {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.brand-name .live {
+    color: #ff9900;
+}
+
+.brand-tagline {
+    font-size: 24px;
+    font-weight: 600;
+    color: #ff9900;
+}
+
+.brand-subtitle {
+    font-size: 16px;
+    color: #888;
+}
+
+.login-section {
+    padding: 40px;
+}
+
+.welcome-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.input-wrapper-with-icon {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>');
+    background-repeat: no-repeat;
+}
+
+.input-wrapper-with-icon input {
+    width: 100%;
+    padding: 15px 15px 15px 50px;
+    background-color: #222;
+    border: 1px solid #444;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 16px;
+}
+
+#login-continue-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #fff;
+    color: #000;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.signup-link {
+    margin-top: 20px;
+    color: #888;
+}
+
+.signup-link a {
+    color: #fff;
+    font-weight: bold;
+}
+
+.social-login-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.social-btn {
+    padding: 10px;
+    background-color: #222;
+    color: #fff;
+    border: 1px solid #444;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .split-container {
+        grid-template-columns: 1fr;
+        max-width: 100%;
+        padding: 20px;
+    }
+
+    .brand-section {
+        padding: 40px 20px;
+    }
+
+    .login-section {
+        padding: 20px;
+    }
+}
