@@ -5,10 +5,12 @@ const path = require('path');
 const fs = require('fs');
 const morgan = require('morgan'); // Import morgan
 require('dotenv').config();
-app.use(cors());
+
+const express = require('express');
+const cors = require('cors');
 
 const app = express();
-
+app.use(cors());      
 app.get("/", (req, res) => {
   res.send("Server is running 🚀");
 });

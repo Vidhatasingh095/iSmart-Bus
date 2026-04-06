@@ -1,9 +1,8 @@
 // --- 1. Global Variables & Config ---
 const API_URL = '/api/auth';
-app.use(express.static("public"));
 // --- 2. Authentication Logic ---
 
-fetch("https://ismart-bus.onrender.com/api/buses")
+fetch("https://ismart-bus.onrender.com/api/bus")
   .then(res => res.json())
   .then(data => console.log(data));
 
