@@ -37,10 +37,10 @@ app.use(morgan('combined', { stream: logStream }));
 const frontendPath = path.join(__dirname, '../frontend');
 
 // --- Database Connection ---
-const mongoURI = 'mongodb://+srv://svidhata28_db_user:<db_password>@cluster0.ob2o4ni.mongodb.net/bustrack';
+const mongoURI = "mongodb+srv://svidhata28_db_user:YOUR_PASSWORD@cluster0.ob2o4ni.mongodb.net/bustrack?retryWrites=true&w=majority";
 mongoose.connect(mongoURI)
-    .then(() => console.log("✅ SUCCESS: CONNECTED TO LOCAL MONGODB!"))
-    .catch((err) => console.log("❌ DB ERROR:", err.message));
+  .then(() => console.log("✅ MongoDB Atlas connected"))
+  .catch(err => console.log("❌ DB error:", err.message));
 
 // --- API Routes ---
 const authRoutes = require('./models/auth');
