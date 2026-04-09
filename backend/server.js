@@ -37,7 +37,7 @@ app.use(morgan('combined', { stream: logStream }));
 const frontendPath = path.join(__dirname, '../frontend');
 
 // --- Database Connection ---
-const mongoURI = 'mongodb://127.0.0.1:27017/bustrack';
+const mongoURI = 'mongodb://+srv://svidhata28_db_user:<db_password>@cluster0.ob2o4ni.mongodb.net/bustrack';
 mongoose.connect(mongoURI)
     .then(() => console.log("✅ SUCCESS: CONNECTED TO LOCAL MONGODB!"))
     .catch((err) => console.log("❌ DB ERROR:", err.message));
